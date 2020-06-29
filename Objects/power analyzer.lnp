@@ -1,0 +1,13 @@
+--cpu=Cortex-M4.fp
+".\objects\main.o"
+".\objects\delay.o"
+".\objects\vi.o"
+".\objects\adc.o"
+".\objects\ili9341.o"
+".\objects\spi.o"
+".\objects\startup_stm32f407xx.o"
+".\objects\system_stm32f4xx.o"
+--strict --scatter ".\Objects\power analyzer.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\power analyzer.map" -o ".\Objects\power analyzer.axf"
